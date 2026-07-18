@@ -777,6 +777,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 233008379618658284, guid: 0055f03b915aab240bb497e5dffbf7af, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 678146396258651921, guid: 0055f03b915aab240bb497e5dffbf7af, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2373704487814360256, guid: 0055f03b915aab240bb497e5dffbf7af, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7741312555695739706, guid: 0055f03b915aab240bb497e5dffbf7af, type: 3}
       propertyPath: m_Name
       value: Log3 (1)
@@ -890,7 +902,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 2aae122b9879f2d4c9b07bae1c2c78c7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1096,6 +1108,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4374030414262149786, guid: 304a7ed2fbf0e724d87ee8eafe541ebd, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4832137776089027571, guid: 304a7ed2fbf0e724d87ee8eafe541ebd, type: 3}
       propertyPath: m_Name
       value: Log 4 (1)
@@ -1494,7 +1510,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 3ab86a6f66328f04ea9d4b65da5f5505, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1700,6 +1716,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed941f47ac3412f469ded393e2bb4d76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Frogger
+  idleSprite: {fileID: 21300000, guid: accdfca821fcfad4aa0e79fe4138f7df, type: 3}
+  leapSprite: {fileID: 21300000, guid: c032d92b984378d4ebe60f300734cb08, type: 3}
 --- !u!1001 &1562736692
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2688,6 +2706,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 678146396258651921, guid: 0055f03b915aab240bb497e5dffbf7af, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2373704487814360256, guid: 0055f03b915aab240bb497e5dffbf7af, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7741312555695739706, guid: 0055f03b915aab240bb497e5dffbf7af, type: 3}
       propertyPath: m_Name
       value: Log3
@@ -2976,6 +3002,14 @@ PrefabInstance:
     - target: {fileID: 465682326383143687, guid: 3241c1d1f770c2e4b81aa863c0510788, type: 3}
       propertyPath: m_Name
       value: Car1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2529931287679332077, guid: 3241c1d1f770c2e4b81aa863c0510788, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2529931287679332077, guid: 3241c1d1f770c2e4b81aa863c0510788, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4029812173183361266, guid: 3241c1d1f770c2e4b81aa863c0510788, type: 3}
       propertyPath: m_LocalPosition.x
