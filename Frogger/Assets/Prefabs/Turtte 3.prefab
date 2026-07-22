@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 17174061128791037}
   - component: {fileID: -6454902199003212826}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Turtte 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
