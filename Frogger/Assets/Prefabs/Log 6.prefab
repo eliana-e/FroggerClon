@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1355827512109448328}
   - component: {fileID: 8499618070788147217}
   - component: {fileID: 3421308302100831453}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LogStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 1160210029126890770}
   - component: {fileID: 4386749666803983146}
   - component: {fileID: 2849107189894603426}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LogMiddle (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -285,7 +285,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6424527433543249580}
-  m_Layer: 0
+  - component: {fileID: 6796463359435510532}
+  m_Layer: 6
   m_Name: Log 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -313,6 +314,21 @@ Transform:
   - {fileID: 470264798005092286}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6796463359435510532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5246031666235497944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 799b36bdbcd8bde439df88f26e77df8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MoveCycle
+  direction: {x: 1, y: 0}
+  speed: 3
+  size: 6
 --- !u!1 &5573383314644806178
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,7 +340,7 @@ GameObject:
   - component: {fileID: 149441731819843229}
   - component: {fileID: 1439343253259129975}
   - component: {fileID: 989026475925972026}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LogMiddle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -462,7 +478,7 @@ GameObject:
   - component: {fileID: 2734144717899711480}
   - component: {fileID: 7927209364960301662}
   - component: {fileID: 8814558895235200428}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LogMiddle (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -600,7 +616,7 @@ GameObject:
   - component: {fileID: 4054180189646096959}
   - component: {fileID: 3580131841179385637}
   - component: {fileID: 5824691968483497899}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LogMiddle (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -738,7 +754,7 @@ GameObject:
   - component: {fileID: 470264798005092286}
   - component: {fileID: 7253509942859121667}
   - component: {fileID: 967957840906438075}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LogEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}

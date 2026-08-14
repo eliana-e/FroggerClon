@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 3852489901628443973}
   - component: {fileID: 6461468092677356742}
   - component: {fileID: -4100408435428669920}
-  m_Layer: 0
+  - component: {fileID: -142142075209875731}
+  m_Layer: 7
   m_Name: Car4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138,3 +139,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-142142075209875731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6965344031962476892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 799b36bdbcd8bde439df88f26e77df8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MoveCycle
+  direction: {x: 1, y: 0}
+  speed: 3
+  size: 1
