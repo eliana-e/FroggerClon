@@ -4,18 +4,18 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    private Home[] homes;
-    private Frogger frogger;
+    [SerializeField] private Home[] homes;
+    [SerializeField] private Frogger frogger;
 
     private int score;
     private int lives;
     private int time;
 
-    public GameObject gameOverMenu; 
+    [SerializeField] private GameObject gameOverMenu;
 
-    public Text scoreText;
-    public Text livesText;
-    public Text timeText;
+    [SerializeField] private Text scoreText;
+    [SerializeField] private Text livesText;
+    [SerializeField] private Text timeText;
     private void Awake()
     {
         homes = FindObjectsOfType<Home>();
