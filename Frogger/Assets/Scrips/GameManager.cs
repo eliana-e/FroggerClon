@@ -4,22 +4,29 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    [Header("Game References")]
     [SerializeField] private Home[] homes;
     [SerializeField] private Frogger frogger;
 
+    [Header("UI")]
+    [SerializeField] private Text scoreText;
+    [SerializeField] private Text livesText;
+    [SerializeField] private Text timeText;
+    [SerializeField] private GameObject gameOverMenu;
+
+    [Header("Game Settings")]
     private int score;
     private int lives;
     private int time;
 
-    [SerializeField] private GameObject gameOverMenu;
+    public int Score => score;
+    public int Lives => lives;
+    public float Time => time;
 
-    [SerializeField] private Text scoreText;
-    [SerializeField] private Text livesText;
-    [SerializeField] private Text timeText;
+
     private void Awake()
     {
-        homes = FindObjectsOfType<Home>();
-        frogger= FindObjectOfType<Frogger>(); 
+        
     }
     private void NewGame()
     {
@@ -92,17 +99,24 @@ public class GameManager : MonoBehaviour
         }
         NewGame();
     }
-    public void Died()
+
+    private void RemoveLife()
     {
         SetLives(lives - 1);
 
         if (lives > 0)
         {
             Invoke(nameof(Respawn), 1f);
-        } else
+        }
+        else
         {
             Invoke(nameof(GameOver), 1f);
         }
+    }
+    public void Died()
+    {
+      
+        RemoveLife();
     }
     public void AdvancedRow()
     {
