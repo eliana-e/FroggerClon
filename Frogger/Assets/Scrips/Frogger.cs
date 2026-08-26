@@ -4,9 +4,11 @@ using System.Collections;
 public class Frogger : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
-    public Sprite idleSprite;
-    public Sprite leapSprite;
-    public Sprite deadSprite;
+    [SerializeField] private Sprite idleSprite;
+    [SerializeField] private Sprite leapSprite;
+    [SerializeField] private Sprite deadSprite;
+
+    [SerializeField] private GameManager gameManager;
 
     private Vector3 spawnPosition;
 
@@ -68,7 +70,7 @@ public class Frogger : MonoBehaviour
             if(destination.y > farthestRow)
             {
                 farthestRow = destination.y;    
-                FindObjectOfType<GameManager>().AdvancedRow();
+                gameManager.AdvancedRow();
             }
             StartCoroutine(Leap(destination));
         }
@@ -102,7 +104,7 @@ public class Frogger : MonoBehaviour
         spriteRenderer.sprite = deadSprite;
         enabled= false;
 
-        FindObjectOfType<GameManager>().Died();
+        gameManager.Died();
     }
 
     public void Respawn()
