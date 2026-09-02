@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Text livesText;
     [SerializeField] private Text timeText;
     [SerializeField] private GameObject gameOverMenu;
+    [SerializeField] private GameObject startMenu;
 
     [Header("Game Settings")]
     private int score;
@@ -30,7 +31,9 @@ public class GameManager : MonoBehaviour
     }
     private void NewGame()
     {
+        frogger.gameObject.SetActive(true);
         gameOverMenu.SetActive(false);
+        startMenu.SetActive(false);
 
         SetScore(0);
         SetLives(3);
@@ -38,13 +41,22 @@ public class GameManager : MonoBehaviour
 
     }
 
+    private void StartGameMenu()
+    {
+        frogger.gameObject.SetActive(false);
+        gameOverMenu.SetActive(false);
+        startMenu.SetActive(true);
+        StopAllCoroutines();
+        StartCoroutine(PlayAgain()); 
+    }
     private void Start()
     {
-        NewGame();
+        StartGameMenu();
     }
 
     private void NewLevel()
     {
+        frogger.gameObject.SetActive(true);
         for (int i = 0; i < homes.Length; i++) {
             homes[i].enabled = false;
         }
