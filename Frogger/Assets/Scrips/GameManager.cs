@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using Unity.VisualScripting.Antlr3.Runtime.Tree;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,14 +13,17 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Text scoreText;
     [SerializeField] private Text livesText;
     [SerializeField] private Text timeText;
+    [SerializeField] private Text highScoreText;
     [SerializeField] private GameObject gameOverMenu;
+    [SerializeField] private GameObject startMenu;
 
     [Header("Game Settings")]
     private int score;
     private int lives;
     private int time;
-
+    private int highScore;
     public int Score => score;
+    public int HighScore => highScore;
     public int Lives => lives;
     public float Time => time;
 
@@ -30,7 +34,9 @@ public class GameManager : MonoBehaviour
     }
     private void NewGame()
     {
+        frogger.gameObject.SetActive(true);
         gameOverMenu.SetActive(false);
+        startMenu.SetActive(false);
 
         SetScore(0);
         SetLives(3);
@@ -38,13 +44,22 @@ public class GameManager : MonoBehaviour
 
     }
 
+    private void StartGameMenu()
+    {
+        frogger.gameObject.SetActive(false);
+        gameOverMenu.SetActive(false);
+        startMenu.SetActive(true);
+        StopAllCoroutines();
+        StartCoroutine(PlayAgain()); 
+    }
     private void Start()
     {
-        NewGame();
+        StartGameMenu();
     }
 
     private void NewLevel()
     {
+        frogger.gameObject.SetActive(true);
         for (int i = 0; i < homes.Length; i++) {
             homes[i].enabled = false;
         }
@@ -77,6 +92,8 @@ public class GameManager : MonoBehaviour
 
     private void GameOver()
     {
+        SetHighScore();
+
         frogger.gameObject.SetActive(false);
         gameOverMenu.SetActive(true);
 
@@ -161,4 +178,15 @@ public class GameManager : MonoBehaviour
         this.lives = lives; 
         livesText.text= lives.ToString();
     }
+
+    public void SetHighScore()
+    {
+        if (score > highScore)
+        {
+            highScore = score;
+            
+        }
+        highScoreText.text = highScore.ToString();
+    }
+    
 }
