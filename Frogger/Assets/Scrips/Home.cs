@@ -1,27 +1,57 @@
+using System;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 
 public class Home : MonoBehaviour
 {
+    [SerializeField] private GameManager gameManager;
     public GameObject frog;
+    private bool isOccupied;
 
-    private void OnEnable()
-    {
-        frog.SetActive(true);
-    }
+    public bool IsOccupied => isOccupied;
 
-    private void OnDisable() 
+    private void Awake()
     {
-        frog.SetActive(false); 
+        UpdateSprite();
     }
 
     private void OnTriggerEnter2D (Collider2D other)
     {
-        if(other.tag== "Player")
-        {   
-            enabled = true;
+        if (!other.CompareTag("Player"))
+        {
+            return;
+        }
 
-            FindObjectOfType<GameManager>().HomeOccupied();
+        Frogger player= other.GetComponentInParent<Frogger>();
+        if (player == null)
+        {
+            return;
+        }
+
+        if (isOccupied)
+        {
+            player.Death();
+            return;
+        }
+
+        isOccupied = true;
+        UpdateSprite();
+
+        gameManager.HomeOccupied();
+    }
+
+    public void ResetHome()
+    {
+        isOccupied=false;
+        UpdateSprite();
+    }
+
+    private void UpdateSprite()
+    {
+        if (frog != null)
+        {
+            frog.SetActive(isOccupied);
         }
     }
 }

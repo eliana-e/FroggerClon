@@ -60,9 +60,11 @@ public class GameManager : MonoBehaviour
     private void NewLevel()
     {
         frogger.gameObject.SetActive(true);
+
         for (int i = 0; i < homes.Length; i++) {
-            homes[i].enabled = false;
+            homes[i].ResetHome();
         }
+
         Respawn();
     }
 
@@ -145,13 +147,14 @@ public class GameManager : MonoBehaviour
 
         int bonusPoints = time * 20;
         SetScore(score + bonusPoints + 50);
-
+         
         if (Cleared())
         {
             SetScore(score + 1000);
             Invoke(nameof(NewLevel), 1f);
-        } 
-        else {
+        }
+        else
+        {
             Invoke(nameof(Respawn), 1f);
         }
     }
@@ -160,10 +163,11 @@ public class GameManager : MonoBehaviour
     {
         for (int i = 0; i < homes.Length; i++)
         {
-            if (!homes[i].enabled)
+            if (!homes[i].IsOccupied)
             {
                 return false;
             }
+            
         }
 
         return true;
