@@ -285,7 +285,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6424527433543249580}
-  - component: {fileID: 6796463359435510532}
+  - component: {fileID: -4456709166229028078}
+  - component: {fileID: 6021349301028088526}
   m_Layer: 6
   m_Name: Log 6
   m_TagString: Untagged
@@ -314,7 +315,7 @@ Transform:
   - {fileID: 470264798005092286}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6796463359435510532
+--- !u!114 &-4456709166229028078
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -323,11 +324,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 5246031666235497944}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 799b36bdbcd8bde439df88f26e77df8b, type: 3}
+  m_Script: {fileID: 11500000, guid: 756cd1a6e05b8cd419aa463c612e95b8, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MoveCycle
+  m_EditorClassIdentifier: Assembly-CSharp::ObstacleMovement
   direction: {x: 1, y: 0}
   speed: 3
+--- !u!114 &6021349301028088526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5246031666235497944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6490e7e5af4c3d545817ed5ef3db0d75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObstaclePoolReturn
   size: 6
 --- !u!1 &5573383314644806178
 GameObject:

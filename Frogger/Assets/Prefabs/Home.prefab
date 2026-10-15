@@ -290,4 +290,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbdfba621aa99d14a9479044b3a8d81e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Home
+  gameManager: {fileID: 0}
   frog: {fileID: 4885274800650584507}

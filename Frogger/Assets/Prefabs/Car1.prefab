@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 4029812173183361266}
   - component: {fileID: 2529931287679332077}
   - component: {fileID: 5611049605735214746}
-  - component: {fileID: -7231045987713836193}
+  - component: {fileID: 2020184623128669091}
+  - component: {fileID: 3939548375644673780}
   m_Layer: 7
   m_Name: Car1
   m_TagString: Untagged
@@ -139,7 +140,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &-7231045987713836193
+--- !u!114 &2020184623128669091
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -148,9 +149,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 465682326383143687}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 799b36bdbcd8bde439df88f26e77df8b, type: 3}
+  m_Script: {fileID: 11500000, guid: 6490e7e5af4c3d545817ed5ef3db0d75, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MoveCycle
+  m_EditorClassIdentifier: Assembly-CSharp::ObstaclePoolReturn
+  size: 1
+--- !u!114 &3939548375644673780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465682326383143687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 756cd1a6e05b8cd419aa463c612e95b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObstacleMovement
   direction: {x: -1, y: 0}
   speed: 2
-  size: 1
